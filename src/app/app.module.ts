@@ -11,6 +11,7 @@ import { CurrentComponent } from './current/current.component';
 import { weatherRouting } from './weather.routing';
 import { WeatherService } from './weather.service';
 import { ResolveLocationService } from './resolve-location.service';
+import { ChartModule } from 'angular-highcharts';
 
 
 @NgModule({
@@ -25,7 +26,8 @@ import { ResolveLocationService } from './resolve-location.service';
     FormsModule,
     HttpModule,
     weatherRouting,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    ChartModule
   ],
   providers: [WeatherService, ResolveLocationService],
   bootstrap: [AppComponent]
