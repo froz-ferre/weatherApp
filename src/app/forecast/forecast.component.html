@@ -1,3 +1,16 @@
-<p>
-  forecast works!
-</p>
+<form [formGroup]="forecastForm" (ngSubmit)="onSubmit()">
+  <input type="text" placeholder="Input city here" formControlName="forecastCity">
+  <button>search</button>
+</form>
+<div>
+  <div class="day" *ngFor="let day of cityForecast">
+    <h2>{{day.day | date: 'MMMM d'}}</h2>
+    <div class="icon">
+      <img src="http://openweathermap.org/img/w/{{day.icon}}.png">
+    </div>
+    <div class="temp">
+      <h3>{{day.temp}}&deg;C</h3>
+    </div>
+  </div>
+</div>
+

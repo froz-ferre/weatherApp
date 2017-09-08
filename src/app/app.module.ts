@@ -1,5 +1,5 @@
 import { HttpModule } from '@angular/http';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
@@ -10,7 +10,8 @@ import { CurrentComponent } from './current/current.component';
 
 import { weatherRouting } from './weather.routing';
 import { WeatherService } from './weather.service';
-import { ResolveLocationService } from './resolve-location.service'
+import { ResolveLocationService } from './resolve-location.service';
+
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { ResolveLocationService } from './resolve-location.service'
     BrowserModule,
     FormsModule,
     HttpModule,
-    weatherRouting
+    weatherRouting,
+    ReactiveFormsModule
   ],
   providers: [WeatherService, ResolveLocationService],
   bootstrap: [AppComponent]

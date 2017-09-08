@@ -4,7 +4,7 @@ import { WeatherService } from './weather.service';
 import { Injectable } from '@angular/core';
 
 @Injectable()
-export class ResolveLocationService implements Resolve <any> {
+export class ResolveLocationService implements Resolve<any> {
 
   constructor(private ws:WeatherService) { }
 

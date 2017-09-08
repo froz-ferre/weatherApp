@@ -1,9 +1,13 @@
 <div class="container">
   <h1>{{myWeather.cityName}}</h1>
-  <h2>{{myWeather.temp}}&deg;</h2> 
+  <h2>{{myWeather.temp}}&deg;C</h2> 
   <div class="img">
     <img src="http://openweathermap.org/img/w/{{myWeather.icon}}.png" alt="{{myWeather.weatherType}}">
     <p>{{myWeather.weatherType}}</p>
   </div>
-  <h4>Min: {{myWeather.minTemp}}&deg;  |  Max: {{myWeather.maxTemp}}&deg;</h4>
+  <h4>Min: {{myWeather.minTemp}}&deg;C  |  Max: {{myWeather.maxTemp}}&deg;C</h4>
 </div>
+<form (ngSubmit)="onSubmit(form)" #form="ngForm">
+  <input type="text" ngModel name="city" placeholder="Type city name here">
+  <button name="button">search</button>
+</form>
