@@ -1,4 +1,13 @@
-<nav>
-  <a [routerLink]="['/']">Current weather</a>
-  <a [routerLink]="['/forecast']">Daily forecast weather</a>  
-</nav>
+<div class="container-fluid header">
+
+  <img src="http://www.emtv.com.pg/wp-content/uploads/2016/09/weather-header-NEW-2-800x244.jpg">
+
+  <div class="row">
+    <div class="col-md-6">  
+        <p class="navigate"><a [routerLink]="['/']">Current weather</a></p>
+    </div>
+    <div class="col-md-6">
+        <p class="navigate"><a [routerLink]="['/forecast']">Daily forecast weather</a></p>  
+    </div>
+</div>
+</div>
