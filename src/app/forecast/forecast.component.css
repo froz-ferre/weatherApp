@@ -1,0 +1,9 @@
+.day {
+    display: inline-block;
+    margin: 0 5%;
+    text-align: center;
+}
+
+.row {
+    text-align: center;
+}

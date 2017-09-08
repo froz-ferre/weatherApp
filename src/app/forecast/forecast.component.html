@@ -1,10 +1,16 @@
-<form [formGroup]="forecastForm" (ngSubmit)="onSubmit()">
-  <input type="text" placeholder="Input city here" formControlName="forecastCity">
-  <button>search</button>
-</form>
+<div class="row">
+  <div class="col-md-12">
+      <form [formGroup]="forecastForm" (ngSubmit)="onSubmit()">
+          <input class="input-lg" type="text" placeholder="Input city here" formControlName="forecastCity">
+          <button class="btn btn-info btn-lg">search</button>
+        </form>
+  </div>
+</div>
+
+
 <div>
   <div class="day" *ngFor="let day of cityForecast">
-    <h2>{{day.day | date: 'MMMM d'}}</h2>
+    <h2>{{day.day | date: 'd MMM'}}</h2>
     <div class="icon">
       <img src="http://openweathermap.org/img/w/{{day.icon}}.png">
     </div>
@@ -13,4 +19,5 @@
     </div>
   </div>
 </div>
+
 
